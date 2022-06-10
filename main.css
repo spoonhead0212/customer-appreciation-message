@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    /* outline: 1px solid black; */
 }
 
 :root {
@@ -20,13 +21,12 @@ body {
 h1 {
     color: var(--main-purple-clr);
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: 5vw;
 }
 
 .fas {
     color: #ff7b00;
     padding-inline: 3px;
-    padding-top: 10px;
 }
 
 .upper-container-left p {
@@ -42,7 +42,6 @@ h1 {
 .all-content-container {
     background-color: white;
     width: 90%;
-    height: auto;
     margin-inline: auto;
     margin-block: 3rem;
     padding: 6%;
@@ -64,10 +63,16 @@ h1 {
 
 .rating {
     display: flex;
+    align-items: center;
     background-color: var(--rating-bg);
     padding-left: 1.5rem;
     padding-block: 0.60rem;
     border-radius: 3px;
+}
+
+.rating > div {
+    display: flex;
+    align-self: center;
 }
 
 .rating-1 {
@@ -144,6 +149,14 @@ h6 {
 }
 
 @media  screen and (max-width: 1000px) {
+    .upper-container-left h1 {
+        font-size: calc(5vw + 20px);
+    }
+
+    .all-content-container {
+        padding-bottom: 5rem;
+    }
+
     .user-comment-container {
         display: inline;
     }
@@ -165,6 +178,18 @@ h6 {
 
     .upper-container {
         display: inline;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .rating {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rating > div {
+        display: inline;
+        margin-bottom: 1rem;
     }
 }
 
